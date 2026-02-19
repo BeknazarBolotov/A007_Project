@@ -1,54 +1,46 @@
-:root {
-  --primary-blue: #0d3b66;
-  --accent-blue: #1d70b8;
-  --light-gray: #f4f6f9;
-  --dark-gray: #2f3e46;
-  --cta-yellow: #ffc107; /* для кнопок и акцентов */
-}
-
+/* General body */
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--light-gray);
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f9;
   margin: 0;
   scroll-behavior: smooth;
 }
 
-/* Общие заголовки */
-h1, h2, h3 {
-  color: var(--dark-gray);
-}
-
 /* Navbar */
-.navbar-custom {
-  background-color: var(--primary-blue);
-  padding: 1rem 2rem;
+.navbar {
+  transition: 0.3s;
 }
 
-.navbar-custom .nav-link {
+.navbar .nav-link {
   color: white;
   margin-left: 20px;
   font-weight: 500;
   transition: 0.3s;
 }
 
-.navbar-custom .nav-link:hover {
-  color: var(--cta-yellow);
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #ffc107 !important;
 }
 
-/* Hero */
+.navbar-brand {
+  letter-spacing: 1px;
+}
+
+/* Hero Section */
 .hero-section {
   height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue));
-  color: white;
   text-align: center;
+  background: linear-gradient(135deg, #0d3b66, #1d70b8);
+  color: white;
 }
 
 .hero-section h1 {
   font-size: 3rem;
-  line-height: 1.2;
+  font-weight: 700;
 }
 
 .hero-section p {
@@ -63,8 +55,8 @@ h1, h2, h3 {
   margin-top: 2rem;
   padding: 12px 35px;
   font-weight: 600;
-  background-color: var(--cta-yellow);
-  color: var(--primary-blue);
+  background-color: #ffc107;
+  color: #0d3b66;
   border-radius: 8px;
   transition: 0.3s;
 }
@@ -73,7 +65,7 @@ h1, h2, h3 {
   background-color: #e6b800;
 }
 
-/* Cards */
+/* Cards (Services) */
 .card-custom {
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
@@ -86,8 +78,104 @@ h1, h2, h3 {
 
 /* Footer */
 footer {
-  background-color: var(--primary-blue);
+  background-color: #0d3b66;
   color: white;
   text-align: center;
   padding: 1.5rem;
+}
+
+/* Navbar fixed-top adjustments */
+.navbar-custom {
+  background-color: #0d3b66; /* dark blue */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  font-family: 'Segoe UI', sans-serif;
+  z-index: 1030; /* ensure it stays above content */
+}
+
+/* Add top padding to body so content is not hidden behind fixed navbar */
+body {
+  padding-top: 80px; /* adjust to navbar height */
+}
+
+/* Brand */
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: white;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.navbar-brand:hover {
+  color: #ffc107;
+}
+
+/* Links */
+.navbar-custom .nav-link {
+  color: white;
+  font-weight: 500;
+  margin-left: 12px;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+  color: #ffc107 !important;
+  transform: translateY(-2px);
+}
+
+/* Language dropdown */
+.lang-dropdown {
+  cursor: pointer;
+}
+
+.navbar-custom .dropdown-menu {
+  border-radius: 8px;
+  min-width: 100px;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0;
+  transition: all 0.3s;
+}
+
+.navbar-custom .dropdown-item {
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.navbar-custom .dropdown-item:hover {
+  background-color: #0d3b66;
+  color: #ffc107;
+}
+
+/* Footer темнее, чем navbar */
+.footer {
+  background-color: #0a2c4d; /* темно-синий глубокий */
+  color: white;
+}
+
+/* Карта */
+.map-container iframe {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Footer всегда внизу */
+html, body {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.footer.mt-auto {
+  margin-top: auto;
+}
+
+/* Адаптивность */
+@media (max-width: 767px) {
+  .footer .row {
+    text-align: center;
+  }
 }

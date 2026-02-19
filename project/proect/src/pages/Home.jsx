@@ -1,20 +1,22 @@
-import { Link } from "react-router-dom";
+import HeroImage from "../assets/images/hero.jpg";
 
-function Home() {
+function Hero() {
   return (
-    <section className="hero-section">
-      <div className="container">
+    <section
+      className="hero-section"
+      style={{
+        backgroundImage: `url(${HeroImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        height: "90vh",
+      }}
+    >
+      <div className="container text-center text-white">
         <h1>Энергетические решения нового поколения</h1>
-        <p>
-          Dimed — надежный партнер для бизнеса и частных клиентов.  
-          Инновационные технологии, стабильная энергия и минимальные затраты.
-        </p>
-        <Link to="/services" className="btn btn-cta">
-          Подробнее об услугах
-        </Link>
+        <p>Надежная энергия для бизнеса и частных клиентов</p>
       </div>
     </section>
   );
 }
 
-export default Home;
+export default Hero;

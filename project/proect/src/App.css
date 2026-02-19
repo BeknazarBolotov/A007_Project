@@ -1,16 +1,12 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
+.navbar .nav-link {
+  transition: color 0.3s;
 }
 
-.navbar {
-  transition: 0.3s;
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #ffc107 !important; /* Bootstrap override for CTA accent */
 }
 
-.nav-link:hover {
-  color: #ffc107 !important;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  transition: 0.3s;
+.navbar-brand {
+  letter-spacing: 1px;
 }
