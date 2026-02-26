@@ -1,0 +1,9 @@
+chat bot basic 
+language
+UI/UX
+Burger 
+
+
+SAMPLES:
+1)https://bakai.kg/ru/business/?gad_source=1&gad_campaignid=23302555145&gbraid=0AAAAApzcOXPLmlpWk4q1YcuAStIPoLpcB&gclid=EAIaIQobChMIsZKoyOXnkgMVQZODBx2btRnsEAAYASAAEgLUVvD_BwE
+2)https://www.harvard.edu/
