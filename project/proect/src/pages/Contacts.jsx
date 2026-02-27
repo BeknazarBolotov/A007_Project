@@ -75,7 +75,12 @@ function Contacts() {
 
               <h5 className="fw-bold mb-3">Мы в соцсетях:</h5>
               <div className="d-flex gap-3">
-                <a href="#" className="btn btn-outline-primary btn-sm d-flex align-items-center gap-2">
+                <a
+                  href="https://www.instagram.com/bekawwwwwwwww"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-outline-primary btn-sm d-flex align-items-center gap-2"
+                >
                   <FaInstagram /> Instagram
                 </a>
               </div>

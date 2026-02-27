@@ -12,43 +12,72 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-custom fixed-top py-3">
       <div className="container">
         {/* Brand */}
-        <NavLink className="navbar-brand" to="/">Dimed</NavLink>
+        <NavLink className="navbar-brand fw-bold" to="/">
+          Dimed
+        </NavLink>
 
         {/* Hamburger */}
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span className="navbar-toggler-icon" style={{ filter: 'invert(1)' }}></span>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon" style={{ filter: "invert(1)" }}></span>
         </button>
 
         {/* Links */}
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto align-items-lg-center">
             <li className="nav-item">
-              <NavLink className="nav-link px-3" to="/">{t('navbar.home')}</NavLink>
+              <NavLink className="nav-link px-3" to="/">
+                {t("navbar.home")}
+              </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link px-3" to="/about">{t('navbar.about')}</NavLink>
+              <NavLink className="nav-link px-3" to="/about">
+                {t("navbar.about")}
+              </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link px-3" to="/services">{t('navbar.services')}</NavLink>
+              <NavLink className="nav-link px-3" to="/services">
+                {t("navbar.services")}
+              </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link px-3" to="/contacts">{t('navbar.contacts')}</NavLink>
+              <NavLink className="nav-link px-3" to="/contacts">
+                {t("navbar.contacts")}
+              </NavLink>
             </li>
 
             {/* Language dropdown */}
             <li className="nav-item dropdown ms-lg-4 mt-2 mt-lg-0">
-              <a className="nav-link dropdown-toggle lang-dropdown" href="#" role="button" data-bs-toggle="dropdown">
+              <button
+                className="nav-link dropdown-toggle btn btn-link"
+                id="langDropdown"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 {i18n.language.toUpperCase()}
-              </a>
-              <ul className="dropdown-menu dropdown-menu-end shadow">
+              </button>
+              <ul className="dropdown-menu dropdown-menu-end shadow" aria-labelledby="langDropdown">
                 <li>
-                  <button className="dropdown-item" onClick={() => changeLanguage('ru')}>RU</button>
+                  <button className="dropdown-item" onClick={() => changeLanguage("ru")}>
+                    RU
+                  </button>
                 </li>
                 <li>
-                  <button className="dropdown-item" onClick={() => changeLanguage('ky')}>KY</button>
+                  <button className="dropdown-item" onClick={() => changeLanguage("ky")}>
+                    KY
+                  </button>
                 </li>
                 <li>
-                  <button className="dropdown-item" onClick={() => changeLanguage('en')}>EN</button>
+                  <button className="dropdown-item" onClick={() => changeLanguage("en")}>
+                    EN
+                  </button>
                 </li>
               </ul>
             </li>

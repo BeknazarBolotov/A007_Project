@@ -1,17 +1,17 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./src/components/Navbar";
-import Footer from "./src/components/Footer";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
-import Home from "./src/pages/Home";
-import About from "./src/pages/About";
-import Services from "./src/pages/Services";
-import Contacts from "./src/pages/Contacts";
-import Projects from "./src/pages/Projects";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Contacts from "./pages/Contacts";
+import Projects from "./pages/Projects";
 
-import ScrollToTop from "./src/components/ScrollToTop";
-import NotFound from "./src/pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
+import NotFound from "./pages/NotFound";
 
-import ChatBot from "./src/components/ChatBot"; // <-- импортируем чат-бота
+import ChatBot from "./components/ChatBot"; // <-- импортируем чат-бота
 
 function App() {
   return (

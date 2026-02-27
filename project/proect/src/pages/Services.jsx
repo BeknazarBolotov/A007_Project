@@ -2,6 +2,7 @@ import { useState } from "react";
 import SolarIcon from "../assets/icons/solar.png";
 import PowerIcon from "../assets/icons/energy.png";
 import AuditIcon from "../assets/icons/audit.png";
+import "../index.css"
 
 function ServiceCard({ title, desc, features, icon, color, onMore }) {
   return (
@@ -30,13 +31,7 @@ function ServiceCard({ title, desc, features, icon, color, onMore }) {
           Подробнее
         </button>
 
-        <style jsx>{`
-          .service-card:hover {
-            transform: translateY(-10px);
-            transition: 0.3s;
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
-          }
-        `}</style>
+
       </div>
     </div>
   );
